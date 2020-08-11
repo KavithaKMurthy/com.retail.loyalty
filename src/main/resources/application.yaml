@@ -1,2 +1,6 @@
-spring.datasource.url==mongodb://root:root@localhost:27017/loyaltydb
-spring.datasource.driverClassName=com.mongodb.Mongo
+spring:
+  data:
+    mongodb:
+      host: localhost
+      database: loyaltydb
+      port: 27017

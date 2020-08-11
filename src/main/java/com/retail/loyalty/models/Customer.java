@@ -1,11 +1,19 @@
 package com.retail.loyalty.models;
 
 import com.retail.loyalty.enums.Gender;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import sun.reflect.generics.repository.GenericDeclRepository;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.util.Date;
 
+@Document(collection = "customer")
 public class Customer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long customerId;
     private String firstName;
     private String lastName;

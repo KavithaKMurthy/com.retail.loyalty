@@ -1,0 +1,2 @@
+spring.datasource.url==mongodb://root:root@localhost:27017/loyaltydb
+spring.datasource.driverClassName=com.mongodb.Mongo

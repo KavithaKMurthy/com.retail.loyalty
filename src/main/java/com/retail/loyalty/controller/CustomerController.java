@@ -24,28 +24,28 @@ public class CustomerController {
 
     @ApiOperation(nickname = "Add Customer",value="Add new customer", notes="CustomerController",tags={"StoreOperations"})
     @RequestMapping(method= RequestMethod.POST, path= EndPoints.addCustomer)
-    public boolean addCustomer(@RequestBody Customer customer) {
+    public boolean addCustomer(@RequestBody Customer customer) throws Exception {
         boolean status = customerService.createCustomer(customer);
         return status;
     }
 
     @ApiOperation(nickname = "Add Customer",value="update existing customer", notes="CustomerController",tags={"StoreOperations"})
     @RequestMapping(method= RequestMethod.PUT, path=EndPoints.updateCustomer)
-    public boolean updateCustomer(@PathVariable long customerId, @RequestBody Customer customer){
+    public boolean updateCustomer(@PathVariable long customerId, @RequestBody Customer customer) throws Exception {
         boolean status = customerService.updateCustomer(customerId,customer);
         return status;
     }
 
     @ApiOperation(nickname = "Add Customer",value="update customer address", notes="CustomerController",tags={"StoreCustomerSupport"})
     @RequestMapping(method= RequestMethod.PUT, path=EndPoints.updateCustomerAddress)
-    public boolean updateCustomerAddress(@PathVariable long customerId,@RequestBody CustomerAddress customerAddress) {
+    public boolean updateCustomerAddress(@PathVariable long customerId,@RequestBody CustomerAddress customerAddress) throws Exception {
         boolean status = customerAddressService.updateCustomerAddress(customerId,customerAddress);
         return status;
     }
 
     @ApiOperation(nickname = "Add Customer",value="update customer contact details", notes="CustomerController",tags={"CustomerWebApplication"})
     @RequestMapping(method= RequestMethod.PUT, path=EndPoints.updateCustomerContact)
-    public boolean updateCustomerContactDetails(@PathVariable long customerId,@RequestBody CustomerContactDetails customerContactDetails) {
+    public boolean updateCustomerContactDetails(@PathVariable long customerId,@RequestBody CustomerContactDetails customerContactDetails) throws Exception {
         boolean status = customerContactService.updateCustomerContact(customerId,customerContactDetails);
         return status;
     }

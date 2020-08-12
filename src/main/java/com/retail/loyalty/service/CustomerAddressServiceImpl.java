@@ -16,17 +16,24 @@ public class CustomerAddressServiceImpl implements CustomerAddressService {
     private CustomerAddressDaoRepository customerAddressDaoRepository;
 
     public boolean addCustomerAddress(long customerId,CustomerAddress customerAddress) throws Exception {
-
+        try {
+            LOG.info("Service Layer : Processing create customer address");
+            customerAddressDaoRepository.updateCustomerAddress(customerId, customerAddress);
+        }
+        catch(Exception ex) {
+            LOG.error("Service Layer : Error while updating customer address : " + ex.getMessage());
+            throw new Exception(""+ex);
+        }
         return true;
     }
 
     public boolean updateCustomerAddress(long customerId,CustomerAddress customerAddress) throws Exception{
         try {
-            LOG.info("Service Layer : Processing update customer");
+            LOG.info("Service Layer : Processing update customer address");
             customerAddressDaoRepository.updateCustomerAddress(customerId, customerAddress);
         }
         catch(Exception ex) {
-            LOG.error("Service Layer : Error while updating customer : " + ex.getMessage());
+            LOG.error("Service Layer : Error while updating customer address: " + ex.getMessage());
             throw new Exception(""+ex);
         }
         return true;

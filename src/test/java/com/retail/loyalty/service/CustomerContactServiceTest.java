@@ -68,4 +68,14 @@ public class CustomerContactServiceTest {
 
     }
 
+    @Test
+    public void addCustomerContactServiceTestWithException() throws Exception {
+        when(customerContactDaoRepository.updateCustomerContact(Mockito.anyLong(),Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        Throwable thrown = catchThrowable(() ->
+                customerContactService.addCustomerContact(customerId,customerContactDetails)
+        );
+        Assertions.assertThat(thrown)
+                .isInstanceOf(Exception.class);
+    }
+
 }

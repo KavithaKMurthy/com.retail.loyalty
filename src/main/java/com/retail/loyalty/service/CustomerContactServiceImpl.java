@@ -16,16 +16,24 @@ public class CustomerContactServiceImpl implements CustomerContactService{
     private CustomerContactDaoRepository customerContactDaoRepository;
 
     public boolean addCustomerContact(long customerId,CustomerContactDetails customerContactDetails)throws Exception {
+        try {
+            LOG.info("Service Layer : Processing create customer contact");
+            customerContactDaoRepository.updateCustomerContact(customerId, customerContactDetails);
+        }
+        catch(Exception ex) {
+            LOG.error("Service Layer : Error while creating customer contact: " + ex.getMessage());
+            throw new Exception(""+ex);
+        }
         return true;
     }
 
     public boolean updateCustomerContact(long customerId,CustomerContactDetails customerContactDetails) throws Exception{
         try {
-            LOG.info("Service Layer : Processing update customer");
+            LOG.info("Service Layer : Processing update customer contact");
             customerContactDaoRepository.updateCustomerContact(customerId, customerContactDetails);
         }
         catch(Exception ex) {
-            LOG.error("Service Layer : Error while updating customer : " + ex.getMessage());
+            LOG.error("Service Layer : Error while updating customer contact : " + ex.getMessage());
             throw new Exception(""+ex);
         }
         return true;

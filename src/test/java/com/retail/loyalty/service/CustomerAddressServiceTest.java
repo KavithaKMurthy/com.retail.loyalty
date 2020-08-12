@@ -62,4 +62,28 @@ public class CustomerAddressServiceTest {
         Assert.assertEquals(true,customerAddressService.updateCustomerAddress(customerId,customerAddress));
     }
 
+
+    @Test
+    public void updateCustomerContactServiceTestWithException() throws Exception {
+
+        when(customerAddressDaoRepository.updateCustomerAddress(Mockito.anyLong(),Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        Throwable thrown = catchThrowable(() ->
+                customerAddressService.updateCustomerAddress(customerId,customerAddress)
+        );
+        Assertions.assertThat(thrown)
+                .isInstanceOf(Exception.class);
+
+    }
+
+    @Test
+    public void addCustomerAddressServiceWithException() throws Exception {
+
+        when(customerAddressDaoRepository.updateCustomerAddress(Mockito.anyLong(),Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        Throwable thrown = catchThrowable(() ->
+                customerAddressService.addCustomerAddress(customerId,customerAddress)
+        );
+        Assertions.assertThat(thrown)
+                .isInstanceOf(Exception.class);
+
+    }
 }

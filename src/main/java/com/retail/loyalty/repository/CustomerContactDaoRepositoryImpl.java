@@ -23,6 +23,7 @@ public class CustomerContactDaoRepositoryImpl implements CustomerContactDaoRepos
 
     @Autowired
     MongoOperations mongoOperations;
+
     public boolean addCustomerContact(long customerId, CustomerContactDetails customerContactDetails) throws Exception{
         try {
             LOG.info("Repo Layer : Processing create customer");

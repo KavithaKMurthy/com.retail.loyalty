@@ -1,6 +1,6 @@
 package com.retail.loyalty.config;
 
-public class EndPoints {
+public interface  EndPoints {
     public static final String baseUrl="api/v1";
     public static final String addCustomer= baseUrl + "/customer";
     public static final String updateCustomer=baseUrl +"/customer/{customerId}";

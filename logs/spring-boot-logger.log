@@ -1,0 +1,123 @@
+2020-08-14 23:18:35,251 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerControllerTest on INM20228 with PID 25160 (started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-14 23:18:35,258 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-14 23:18:40,213 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:41,589 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:18:41,591 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:18:41,618 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 27 ms
+2020-08-14 23:18:41,696 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerControllerTest in 7.722 seconds (JVM running for 12.007)
+2020-08-14 23:18:41,742 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:18:41,744 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:18:41,746 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 1 ms
+2020-08-14 23:18:42,256 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:18:42,259 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:18:42,263 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 2 ms
+2020-08-14 23:18:42,427 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:18:42,429 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:18:42,432 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 2 ms
+2020-08-14 23:18:42,453 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:18:42,454 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:18:42,457 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-14 23:18:42,597 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerAddressDaoRepositoryTest on INM20228 with PID 25160 (started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-14 23:18:42,599 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-14 23:18:43,534 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-14 23:18:43,707 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 159ms. Found 1 MongoDB repository interfaces.
+2020-08-14 23:18:44,873 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-14 23:18:45,034 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36ce7c57b3ef56c047471d', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:60}] to localhost:27017
+2020-08-14 23:18:45,046 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36ce7c57b3ef56c047471d', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6650300}
+2020-08-14 23:18:46,749 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-14 23:18:47,200 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:47,658 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-08-14 23:18:47,722 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-08-14 23:18:47,790 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-08-14 23:18:48,065 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_1
+2020-08-14 23:18:48,076 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_2
+2020-08-14 23:18:48,093 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_3
+2020-08-14 23:18:48,201 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerAddressDaoRepositoryTest in 5.715 seconds (JVM running for 18.512)
+2020-08-14 23:18:49,056 INFO com.retail.loyalty.repository.CustomerAddressDaoRepositoryImpl [main] Repo Layer : Processing update customer address
+2020-08-14 23:18:49,072 ERROR com.retail.loyalty.repository.CustomerAddressDaoRepositoryImpl [main] Repo Layer : Error while updating customer address : null
+2020-08-14 23:18:49,128 INFO com.retail.loyalty.repository.CustomerAddressDaoRepositoryImpl [main] Repo Layer : Processing update customer address
+2020-08-14 23:18:49,318 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Opened connection [connectionId{localValue:2, serverValue:61}] to localhost:27017
+2020-08-14 23:18:49,441 INFO com.retail.loyalty.repository.CustomerAddressDaoRepositoryImpl [main] Repo Layer : Processing add customer address
+2020-08-14 23:18:49,449 ERROR com.retail.loyalty.repository.CustomerAddressDaoRepositoryImpl [main] Repo Layer : Error while adding customer address : null
+2020-08-14 23:18:49,468 INFO com.retail.loyalty.repository.CustomerAddressDaoRepositoryImpl [main] Repo Layer : Processing add customer address
+2020-08-14 23:18:49,597 INFO com.retail.loyalty.repository.CustomerContactDaoRepositoryImpl [main] Repo Layer : Processing create customer
+2020-08-14 23:18:49,617 INFO com.retail.loyalty.repository.CustomerContactDaoRepositoryImpl [main] Repo Layer : Processing create customer
+2020-08-14 23:18:49,619 ERROR com.retail.loyalty.repository.CustomerContactDaoRepositoryImpl [main] Repo Layer : Error while creating customer : null
+2020-08-14 23:18:49,630 INFO com.retail.loyalty.repository.CustomerContactDaoRepositoryImpl [main] Repo Layer : Processing create customer
+2020-08-14 23:18:49,648 INFO com.retail.loyalty.repository.CustomerContactDaoRepositoryImpl [main] Repo Layer : Processing create customer
+2020-08-14 23:18:49,649 ERROR com.retail.loyalty.repository.CustomerContactDaoRepositoryImpl [main] Repo Layer : Error while creating customer : null
+2020-08-14 23:18:49,744 INFO com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Processing update customer contact
+2020-08-14 23:18:49,752 ERROR com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Error while updating customer contact : Invalid Customer
+2020-08-14 23:18:49,768 INFO com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Processing create customer contact
+2020-08-14 23:18:49,769 ERROR com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Error while creating customer contact: Invalid Customer
+2020-08-14 23:18:49,783 INFO com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Processing update customer contact
+2020-08-14 23:18:49,784 INFO com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Processing update customer contact
+2020-08-14 23:18:49,806 INFO com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Processing create customer contact
+2020-08-14 23:18:49,807 INFO com.retail.loyalty.service.CustomerContactServiceImpl [main] Service Layer : Processing create customer contact
+2020-08-14 23:18:49,950 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [main] Repository Layer : Processing create customer
+2020-08-14 23:18:49,953 ERROR com.retail.loyalty.repository.CustomerDaoRepositoryImpl [main] Repository Layer : Error while creating customer : Instance must not be null
+2020-08-14 23:18:49,968 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [main] Repo Layer : Processing create customer
+2020-08-14 23:18:50,147 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [main] Repository Layer : Processing create customer
+2020-08-14 23:18:50,177 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [main] Repo Layer : Processing create customer
+2020-08-14 23:18:50,178 ERROR com.retail.loyalty.repository.CustomerDaoRepositoryImpl [main] Repo Layer : Error while creating customer : Entity must not be null!
+2020-08-14 23:18:50,222 INFO com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Processing create customer address
+2020-08-14 23:18:50,223 ERROR com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Error while updating customer address : Invalid Customer
+2020-08-14 23:18:50,242 INFO com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Processing update customer address
+2020-08-14 23:18:50,244 INFO com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Processing update customer address
+2020-08-14 23:18:50,265 INFO com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Processing update customer address
+2020-08-14 23:18:50,267 ERROR com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Error while updating customer address: Invalid Customer
+2020-08-14 23:18:50,285 INFO com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Processing create customer address
+2020-08-14 23:18:50,286 INFO com.retail.loyalty.service.CustomerAddressServiceImpl [main] Service Layer : Processing create customer address
+2020-08-14 23:18:50,440 INFO org.springframework.boot.StartupInfoLogger [main] Starting ApplicationTest on INM20228 with PID 25160 (started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-14 23:18:50,441 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-14 23:18:51,523 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-14 23:18:51,690 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 163ms. Found 1 MongoDB repository interfaces.
+2020-08-14 23:18:51,993 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-14 23:18:52,002 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36ce8357b3ef56c047471e', description='null'}-localhost:27017] Opened connection [connectionId{localValue:3, serverValue:62}] to localhost:27017
+2020-08-14 23:18:52,005 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36ce8357b3ef56c047471e', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1690600}
+2020-08-14 23:18:53,250 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-14 23:18:53,556 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:54,032 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-08-14 23:18:54,033 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-08-14 23:18:54,056 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-08-14 23:18:54,113 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_1
+2020-08-14 23:18:54,123 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_2
+2020-08-14 23:18:54,136 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_3
+2020-08-14 23:18:54,150 INFO org.springframework.boot.StartupInfoLogger [main] Started ApplicationTest in 3.847 seconds (JVM running for 24.461)
+2020-08-14 23:18:54,254 INFO org.springframework.boot.StartupInfoLogger [main] Starting SpringBootMainApplication on INM20228 with PID 25160 (started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-14 23:18:54,254 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-14 23:18:55,171 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-14 23:18:55,240 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 64ms. Found 1 MongoDB repository interfaces.
+2020-08-14 23:18:55,716 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-08-14 23:18:55,746 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-14 23:18:55,750 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-08-14 23:18:55,751 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-14 23:18:56,164 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-08-14 23:18:56,165 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1902 ms
+2020-08-14 23:18:56,313 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-14 23:18:56,317 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36ce8857b3ef56c047471f', description='null'}-localhost:27017] Opened connection [connectionId{localValue:4, serverValue:63}] to localhost:27017
+2020-08-14 23:18:56,319 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36ce8857b3ef56c047471f', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1029000}
+2020-08-14 23:18:56,578 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-14 23:18:56,620 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:56,699 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-14 23:18:56,749 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-14 23:18:56,750 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-08-14 23:18:56,752 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-08-14 23:18:56,763 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-08-14 23:18:56,800 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_1
+2020-08-14 23:18:56,805 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_2
+2020-08-14 23:18:56,815 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: Add Customer_3
+2020-08-14 23:18:56,820 INFO org.springframework.boot.StartupInfoLogger [main] Started SpringBootMainApplication in 2.652 seconds (JVM running for 27.131)
+2020-08-14 23:18:56,858 INFO com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Processing update customer
+2020-08-14 23:18:56,860 ERROR com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Error while updating customer : Invalid Customer
+2020-08-14 23:18:56,868 INFO com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Processing create customer
+2020-08-14 23:18:56,868 INFO com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Processing create customer
+2020-08-14 23:18:56,878 INFO com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Processing create customer
+2020-08-14 23:18:56,879 ERROR com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Error while creating customer : Invalid Customer
+2020-08-14 23:18:56,888 INFO com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Processing update customer
+2020-08-14 23:18:56,888 INFO com.retail.loyalty.service.CustomerServiceImpl [main] Service Layer : Processing create customer
+2020-08-14 23:18:56,973 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:56,975 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:56,976 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:18:56,989 INFO com.mongodb.diagnostics.logging.SLF4JLogger [SpringContextShutdownHook] Closed connection [connectionId{localValue:2, serverValue:61}] to localhost:27017 because the pool has been closed.
+2020-08-14 23:18:59,517 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

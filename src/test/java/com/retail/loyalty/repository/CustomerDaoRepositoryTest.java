@@ -1,31 +1,29 @@
-package com.retail.loyalty.service;
+package com.retail.loyalty.repository;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.retail.loyalty.enums.Gender;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
-import com.retail.loyalty.repository.CustomerContactDaoRepository;
-import com.retail.loyalty.repository.CustomerDaoRepository;
-import com.retail.loyalty.service.CustomerServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Date;
+
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.Mockito.*;
-import java.util.Date;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class CustomerServiceTest {
-
+public class CustomerDaoRepositoryTest {
 
     Customer customer;
     CustomerAddress customerAddress;
@@ -33,10 +31,15 @@ public class CustomerServiceTest {
     Date date;
     long customerId;
     boolean status;
+
     @Mock
+    private CustomerRepository customerRepository;
+
+    @Mock
+    private MongoOperations mongoOperations;
+
+    @Autowired
     private CustomerDaoRepository customerDaoRepository;
-    @InjectMocks
-    private CustomerServiceImpl customerService;
 
     @Before
     public void setup()
@@ -69,27 +72,18 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void addCustomerServiceTest() throws Exception {
+    public void addCustomerTest() throws Exception {
+         when(customerRepository.save(Mockito.any())).thenReturn(true);
 
-        when(customerDaoRepository.createCustomer(Mockito.any())).thenReturn(true);
-        status=customerService.createCustomer(customer);
-        Assert.assertEquals(true,customerService.createCustomer(customer));
+        Assert.assertTrue(customerDaoRepository.createCustomer(customer));
     }
 
     @Test
-    public void updateCustomerServiceTest() throws Exception {
-        when(customerDaoRepository.updateCustomer(Mockito.anyLong(),Mockito.any())).thenReturn(true);
-        status=customerService.updateCustomer(customerId,customer);
-        Assert.assertEquals(true,customerService.createCustomer(customer));
+    public void addCustomerTestWithException() throws Exception {
 
-    }
-
-    @Test
-    public void addCustomerServiceTestWithException() throws Exception {
-
-        when(customerDaoRepository.createCustomer(Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        when(customerRepository.save(Mockito.any())).thenReturn(true);
         Throwable thrown = catchThrowable(() ->
-                customerService.createCustomer(customer)
+                customerDaoRepository.createCustomer(null)
         );
         Assertions.assertThat(thrown)
                 .isInstanceOf(Exception.class);
@@ -97,11 +91,18 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void updateustomerServiceTestWithException() throws Exception {
+    public void updateCustomerTest() throws Exception {
+        when(mongoOperations.findAndReplace(Mockito.any(), Mockito.any())).thenReturn(true);
 
-        when(customerDaoRepository.updateCustomer(Mockito.anyLong(),Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        Assert.assertTrue(customerDaoRepository.updateCustomer(customerId,customer));
+    }
+
+    @Test
+    public void updateCustomerTestWithException() throws Exception {
+
+        when(mongoOperations.findAndReplace(Mockito.any(), Mockito.any())).thenReturn(true);
         Throwable thrown = catchThrowable(() ->
-                customerService.updateCustomer(customerId,customer)
+                customerDaoRepository.updateCustomer(customerId,null)
         );
         Assertions.assertThat(thrown)
                 .isInstanceOf(Exception.class);

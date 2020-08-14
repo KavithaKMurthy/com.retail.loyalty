@@ -1,6 +1,7 @@
 package com.retail.loyalty.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.retail.loyalty.config.EndPoints;
 import com.retail.loyalty.enums.Gender;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
@@ -91,7 +92,7 @@ public class CustomerControllerTest {
     public void createCustomerTest() throws Exception{
         when(customerService.createCustomer(customer)).thenReturn(Boolean.TRUE);
 
-        this.mockMvc.perform(post("/api/v1/customer")
+        this.mockMvc.perform(post("/" + EndPoints.addCustomer)
                     .contentType("application/json")
                     .content(objectMapper.writeValueAsString(customer)))
                     .andExpect(status().isOk());
@@ -101,7 +102,7 @@ public class CustomerControllerTest {
     public void updateCustomerTest() throws Exception{
         when(customerService.updateCustomer(customerId,customer)).thenReturn(Boolean.TRUE);
 
-        this.mockMvc.perform(put("/api/v1/customer/{customerId}",customerId)
+        this.mockMvc.perform(put("/" + EndPoints.updateCustomer,customerId)
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(customer)))
                 .andExpect(status().isOk());
@@ -111,7 +112,7 @@ public class CustomerControllerTest {
     public void updateCustomerAddressTest() throws Exception{
         when(customerAddressService.updateCustomerAddress(customerId,customerAddress)).thenReturn(Boolean.TRUE);
 
-        this.mockMvc.perform(put("/api/v1/customer/address/{customerId}",customerId)
+        this.mockMvc.perform(put("/" + EndPoints.updateCustomerAddress,customerId)
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(customerAddress)))
                 .andExpect(status().isOk());
@@ -121,7 +122,7 @@ public class CustomerControllerTest {
     public void updateCustomerContactDetailsTest() throws Exception{
         when(customerContactService.updateCustomerContact(customerId,customerContactDetails)).thenReturn(Boolean.TRUE);
 
-        this.mockMvc.perform(put("/api/v1/customer/contact/{customerId}",customerId)
+        this.mockMvc.perform(put("/" + EndPoints.updateCustomerContact,customerId)
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(customerContactDetails)))
                 .andExpect(status().isOk());

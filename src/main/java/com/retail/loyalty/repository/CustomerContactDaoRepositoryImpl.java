@@ -27,7 +27,14 @@ public class CustomerContactDaoRepositoryImpl implements CustomerContactDaoRepos
     public boolean addCustomerContact(long customerId, CustomerContactDetails customerContactDetails) throws Exception{
         try {
             LOG.info("Repo Layer : Processing create customer");
-
+            Query query = new Query();
+            query.addCriteria(Criteria.where("_id").is(customerId));
+            query.fields().include("_id");
+            Update update = new Update();
+            update.set("customerContactDetails.mobilePhoneNumber",customerContactDetails.getMobilePhoneNumber());
+            update.set("customerContactDetails.dayTimePhoneNumber",customerContactDetails.getDayTimePhoneNumber());
+            update.set("customerContactDetails.eveningPhoneNumber",customerContactDetails.getEveningPhoneNumber());
+            mongoOperations.findAndModify(query, update, Customer.class);
         }
         catch(Exception ex) {
             LOG.error("Repo Layer : Error while creating customer : " + ex.getMessage());

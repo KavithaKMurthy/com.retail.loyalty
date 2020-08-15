@@ -3,6 +3,7 @@ package com.retail.loyalty.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.retail.loyalty.config.EndPoints;
 import com.retail.loyalty.enums.Gender;
+import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
@@ -90,7 +91,7 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void createCustomerTest() throws Exception{
+    public void createCustomerTest() throws Exception {
         when(customerService.createCustomer(customer)).thenReturn(new CustomerResponse());
 
         this.mockMvc.perform(post("/" + EndPoints.addCustomer)
@@ -126,5 +127,4 @@ public class CustomerControllerTest {
                 .content(objectMapper.writeValueAsString(customerContactDetails)))
                 .andExpect(status().isOk());
     }
-
 }

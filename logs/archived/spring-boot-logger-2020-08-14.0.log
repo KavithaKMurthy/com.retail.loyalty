@@ -1,0 +1,27 @@
+2020-08-14 23:59:44,174 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerControllerTest on INM20228 with PID 20064 (started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-14 23:59:44,183 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-14 23:59:48,586 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-14 23:59:49,501 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:59:49,504 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:59:49,541 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 36 ms
+2020-08-14 23:59:49,626 INFO org.springframework.boot.StartupInfoLogger [main] Started CustomerControllerTest in 6.487 seconds (JVM running for 10.596)
+2020-08-14 23:59:49,681 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:59:49,683 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:59:49,686 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-14 23:59:50,502 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:59:50,502 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:59:50,507 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-14 23:59:50,616 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:59:50,617 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:59:50,621 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 4 ms
+2020-08-14 23:59:50,646 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-14 23:59:50,647 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-14 23:59:50,650 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-14 23:59:50,781 INFO org.springframework.boot.StartupInfoLogger [main] Starting CustomerAddressDaoRepositoryTest on INM20228 with PID 20064 (started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-14 23:59:50,782 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-14 23:59:53,170 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-14 23:59:53,566 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 378ms. Found 1 MongoDB repository interfaces.
+2020-08-14 23:59:55,739 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-14 23:59:56,019 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36d823b4c8262888310ffe', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:64}] to localhost:27017
+2020-08-14 23:59:56,037 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f36d823b4c8262888310ffe', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=12021600}
+2020-08-14 23:59:59,504 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]

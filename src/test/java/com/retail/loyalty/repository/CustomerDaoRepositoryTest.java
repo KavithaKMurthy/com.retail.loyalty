@@ -1,6 +1,7 @@
 package com.retail.loyalty.repository;
 
 import com.retail.loyalty.enums.Gender;
+import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
@@ -72,40 +73,36 @@ public class CustomerDaoRepositoryTest {
     }
 
     @Test
-    public void addCustomerTest() throws Exception {
-         when(customerRepository.save(Mockito.any())).thenReturn(true);
-
-        Assert.assertTrue(customerDaoRepository.createCustomer(customer));
+    public void addCustomerTest() throws CustomerException {
+        when(customerRepository.save(Mockito.any())).thenReturn(true);
+        customerDaoRepository.createCustomer(customer);
     }
 
     @Test
-    public void addCustomerTestWithException() throws Exception {
-
-        when(customerRepository.save(Mockito.any())).thenReturn(true);
+    public void addCustomerTestWithException() throws CustomerException {
+        doThrow(new CustomerException("Invalid Customer")).when(customerRepository).save(Mockito.any());
         Throwable thrown = catchThrowable(() ->
-                customerDaoRepository.createCustomer(null)
+                customerDaoRepository.createCustomer(Mockito.any())
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerException.class);
 
     }
 
     @Test
-    public void updateCustomerTest() throws Exception {
-        when(mongoOperations.findAndReplace(Mockito.any(), Mockito.any())).thenReturn(true);
-
-        Assert.assertTrue(customerDaoRepository.updateCustomer(customerId,customer));
+    public void updateCustomerTest() throws CustomerException {
+        when(mongoOperations.findAndReplace(Mockito.any(),Mockito.any())).thenReturn(Mockito.any());
+        customerDaoRepository.updateCustomer(customerId,customer);
     }
 
     @Test
-    public void updateCustomerTestWithException() throws Exception {
-
-        when(mongoOperations.findAndReplace(Mockito.any(), Mockito.any())).thenReturn(true);
+    public void updateCustomerTestWithException() throws CustomerException {
+        doThrow(new CustomerException("Invalid Customer")).when(mongoOperations).findAndReplace(Mockito.any(),Mockito.any());
         Throwable thrown = catchThrowable(() ->
                 customerDaoRepository.updateCustomer(customerId,null)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerException.class);
 
     }
 }

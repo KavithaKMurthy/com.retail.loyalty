@@ -2,11 +2,13 @@ package com.retail.loyalty.service;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.retail.loyalty.enums.Gender;
+import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
 import com.retail.loyalty.repository.CustomerContactDaoRepository;
 import com.retail.loyalty.repository.CustomerDaoRepository;
+import com.retail.loyalty.response.CustomerResponse;
 import com.retail.loyalty.service.CustomerServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
@@ -32,7 +34,7 @@ public class CustomerServiceTest {
     CustomerContactDetails customerContactDetails;
     Date date;
     long customerId;
-    boolean status;
+    CustomerResponse customerResponse;
     @Mock
     private CustomerDaoRepository customerDaoRepository;
     @InjectMocks
@@ -43,7 +45,6 @@ public class CustomerServiceTest {
     {
         customerId=123l;
         date= new Date();
-        status = Boolean.TRUE;
         customerAddress = new CustomerAddress();
         customerAddress.setAddressLine1("AddressLine1");
         customerAddress.setAddressLine2("AddressLine2");
@@ -69,42 +70,46 @@ public class CustomerServiceTest {
     }
 
     @Test
-    public void addCustomerServiceTest() throws Exception {
+    public void addCustomerServiceTest() throws CustomerException {
 
-        when(customerDaoRepository.createCustomer(Mockito.any())).thenReturn(true);
-        status=customerService.createCustomer(customer);
-        Assert.assertEquals(true,customerService.createCustomer(customer));
+       doNothing().when(customerDaoRepository).createCustomer(Mockito.any());
+         customerResponse =customerService.createCustomer(Mockito.any());
+         Assert.assertNotNull(customerResponse);
+        Assert.assertEquals("success",customerResponse.getStatus());
+        Assert.assertEquals("customer created successfully",customerResponse.getMessage());
     }
 
     @Test
-    public void updateCustomerServiceTest() throws Exception {
-        when(customerDaoRepository.updateCustomer(Mockito.anyLong(),Mockito.any())).thenReturn(true);
-        status=customerService.updateCustomer(customerId,customer);
-        Assert.assertEquals(true,customerService.createCustomer(customer));
+    public void updateCustomerServiceTest() throws CustomerException {
+        doNothing().when(customerDaoRepository).updateCustomer(Mockito.anyLong(), Mockito.any());
+        customerResponse = customerService.updateCustomer(Mockito.anyLong(),Mockito.any());
+        Assert.assertNotNull(customerResponse);
+        Assert.assertEquals("success",customerResponse.getStatus());
+        Assert.assertEquals("customer updated successfully",customerResponse.getMessage());
 
     }
 
     @Test
-    public void addCustomerServiceTestWithException() throws Exception {
+    public void addCustomerServiceTestWithException() throws CustomerException {
 
-        when(customerDaoRepository.createCustomer(Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        doThrow(new CustomerException("Invalid Customer")).when(customerDaoRepository).createCustomer(Mockito.any());
         Throwable thrown = catchThrowable(() ->
                 customerService.createCustomer(customer)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerException.class);
 
     }
 
     @Test
-    public void updateustomerServiceTestWithException() throws Exception {
+    public void updateustomerServiceTestWithException() throws CustomerException {
 
-        when(customerDaoRepository.updateCustomer(Mockito.anyLong(),Mockito.any())).thenThrow(new Exception("Invalid Customer"));
+        doThrow(new CustomerException("Invalid Customer")).when(customerDaoRepository).updateCustomer(Mockito.anyLong(), Mockito.any());
         Throwable thrown = catchThrowable(() ->
                 customerService.updateCustomer(customerId,customer)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerException.class);
 
     }
 }

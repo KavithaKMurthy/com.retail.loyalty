@@ -1,5 +1,6 @@
 package com.retail.loyalty.repository;
 
+import com.retail.loyalty.exception.CustomerAddressException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.service.CustomerServiceImpl;
@@ -22,7 +23,7 @@ public class CustomerAddressDaoRepositoryImpl implements CustomerAddressDaoRepos
     @Autowired
     MongoOperations mongoOperations;
 
-    public boolean addCustomerAddress(long customerId, CustomerAddress customerAddress) throws Exception {
+    public void addCustomerAddress(long customerId, CustomerAddress customerAddress) throws CustomerAddressException {
 
         try {
             LOG.info("Repo Layer : Processing add customer address");
@@ -40,12 +41,11 @@ public class CustomerAddressDaoRepositoryImpl implements CustomerAddressDaoRepos
         }
         catch(Exception ex) {
             LOG.error("Repo Layer : Error while adding customer address : " + ex.getMessage());
-            throw new Exception(""+ex);
+            throw new CustomerAddressException("Repo Layer : Error while adding customer address : "+ex);
         }
-        return true;
     }
 
-    public boolean updateCustomerAddress(long customerId, CustomerAddress customerAddress) throws Exception {
+    public void updateCustomerAddress(long customerId, CustomerAddress customerAddress) throws CustomerAddressException {
         try {
             LOG.info("Repo Layer : Processing update customer address");
             Query query = new Query();
@@ -62,8 +62,7 @@ public class CustomerAddressDaoRepositoryImpl implements CustomerAddressDaoRepos
         }
         catch(Exception ex) {
             LOG.error("Repo Layer : Error while updating customer address : " + ex.getMessage());
-            throw new Exception(""+ex);
+            throw new CustomerAddressException("Repo Layer : Error while updating customer address : "+ex);
         }
-        return true;
     }
 }

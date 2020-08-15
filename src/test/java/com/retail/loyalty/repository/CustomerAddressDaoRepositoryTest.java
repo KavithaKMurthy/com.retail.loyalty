@@ -1,6 +1,7 @@
 package com.retail.loyalty.repository;
 
 import com.retail.loyalty.enums.Gender;
+import com.retail.loyalty.exception.CustomerAddressException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
@@ -48,40 +49,38 @@ public class CustomerAddressDaoRepositoryTest {
     }
 
     @Test
-    public void addCustomerAddressTest() throws Exception {
+    public void addCustomerAddressTest() throws CustomerAddressException {
         when(mongoOperations.findAndModify(Mockito.any(),Mockito.any(), Mockito.any())).thenReturn(true);
-
-        Assert.assertTrue(customerAddressDaoRepository.addCustomerAddress(customerId,customerAddress));
+        customerAddressDaoRepository.addCustomerAddress(customerId,customerAddress);
     }
 
     @Test
-    public void addCustomerAddresTestWithException() throws Exception {
+    public void addCustomerAddresTestWithException() throws CustomerAddressException {
 
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
         Throwable thrown = catchThrowable(() ->
                 customerAddressDaoRepository.addCustomerAddress(customerId,null)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerAddressException.class);
 
     }
 
     @Test
-    public void updateCustomerAddressTest() throws Exception {
+    public void updateCustomerAddressTest() throws CustomerAddressException {
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
-
-        Assert.assertTrue(customerAddressDaoRepository.updateCustomerAddress(customerId,customerAddress));
+        customerAddressDaoRepository.updateCustomerAddress(customerId,customerAddress);
     }
 
     @Test
-    public void updateCustomerAddressTestWithException() throws Exception {
+    public void updateCustomerAddressTestWithException() throws CustomerAddressException {
 
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
         Throwable thrown = catchThrowable(() ->
                 customerAddressDaoRepository.updateCustomerAddress(customerId,null)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerAddressException.class);
 
     }
 }

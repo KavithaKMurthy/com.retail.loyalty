@@ -6,6 +6,7 @@ import com.retail.loyalty.enums.Gender;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
+import com.retail.loyalty.response.CustomerResponse;
 import com.retail.loyalty.service.CustomerAddressService;
 import com.retail.loyalty.service.CustomerContactService;
 import com.retail.loyalty.service.CustomerService;
@@ -90,7 +91,7 @@ public class CustomerControllerTest {
 
     @Test
     public void createCustomerTest() throws Exception{
-        when(customerService.createCustomer(customer)).thenReturn(Boolean.TRUE);
+        when(customerService.createCustomer(customer)).thenReturn(new CustomerResponse());
 
         this.mockMvc.perform(post("/" + EndPoints.addCustomer)
                     .contentType("application/json")
@@ -100,8 +101,7 @@ public class CustomerControllerTest {
 
     @Test
     public void updateCustomerTest() throws Exception{
-        when(customerService.updateCustomer(customerId,customer)).thenReturn(Boolean.TRUE);
-
+        when(customerService.updateCustomer(customerId,customer)).thenReturn(new CustomerResponse());
         this.mockMvc.perform(put("/" + EndPoints.updateCustomer,customerId)
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(customer)))
@@ -110,8 +110,7 @@ public class CustomerControllerTest {
 
     @Test
     public void updateCustomerAddressTest() throws Exception{
-        when(customerAddressService.updateCustomerAddress(customerId,customerAddress)).thenReturn(Boolean.TRUE);
-
+        when(customerAddressService.addCustomerAddress(customerId,customerAddress)).thenReturn(new CustomerResponse());
         this.mockMvc.perform(put("/" + EndPoints.updateCustomerAddress,customerId)
                 .contentType("application/json")
                 .content(objectMapper.writeValueAsString(customerAddress)))
@@ -120,7 +119,7 @@ public class CustomerControllerTest {
 
     @Test
     public void updateCustomerContactDetailsTest() throws Exception{
-        when(customerContactService.updateCustomerContact(customerId,customerContactDetails)).thenReturn(Boolean.TRUE);
+        when(customerContactService.addCustomerContact(customerId,customerContactDetails)).thenReturn(new CustomerResponse());
 
         this.mockMvc.perform(put("/" + EndPoints.updateCustomerContact,customerId)
                 .contentType("application/json")

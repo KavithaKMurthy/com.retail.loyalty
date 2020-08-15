@@ -1,6 +1,7 @@
 package com.retail.loyalty.repository;
 
 import com.retail.loyalty.enums.Gender;
+import com.retail.loyalty.exception.CustomerContactException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
@@ -50,40 +51,39 @@ public class CustomerContactDaoRepositoryTest {
     }
 
     @Test
-    public void addCustomerContactTest() throws Exception {
+    public void addCustomerContactTest() throws CustomerContactException {
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
-
-        Assert.assertTrue(customerContactDaoRepository.addCustomerContact(customerId,customerContactDetails));
+        customerContactDaoRepository.addCustomerContact(customerId,customerContactDetails);
     }
 
     @Test
-    public void addCustomerContactTestWithException() throws Exception {
+    public void addCustomerContactTestWithException() throws CustomerContactException {
 
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
         Throwable thrown = catchThrowable(() ->
                 customerContactDaoRepository.addCustomerContact(customerId,null)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerContactException.class);
 
     }
 
     @Test
-    public void updateCustomerContactTest() throws Exception {
+    public void updateCustomerContactTest() throws CustomerContactException {
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
 
-        Assert.assertTrue(customerContactDaoRepository.updateCustomerContact(customerId,customerContactDetails));
+        customerContactDaoRepository.updateCustomerContact(customerId,customerContactDetails);
     }
 
     @Test
-    public void updateCustomerContactTestWithException() throws Exception {
+    public void updateCustomerContactTestWithException() throws CustomerContactException {
 
         when(mongoOperations.findAndModify(Mockito.any(), Mockito.any(),Mockito.any())).thenReturn(true);
         Throwable thrown = catchThrowable(() ->
                 customerContactDaoRepository.updateCustomerContact(customerId,null)
         );
         Assertions.assertThat(thrown)
-                .isInstanceOf(Exception.class);
+                .isInstanceOf(CustomerContactException.class);
 
     }
 }

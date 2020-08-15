@@ -1,5 +1,6 @@
 package com.retail.loyalty.repository;
 
+import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.service.CustomerServiceImpl;
 import org.slf4j.Logger;
@@ -19,19 +20,18 @@ public class CustomerDaoRepositoryImpl implements CustomerDaoRepository {
     @Autowired
     MongoOperations mongoOperations;
 
-    public boolean createCustomer(Customer customer)  throws Exception{
+    public void createCustomer(Customer customer)  throws CustomerException {
         try {
             LOG.info("Repo Layer : Processing create customer");
             customerRepository.save(customer);
         }
-         catch(Exception ex) {
-            LOG.error("Repo Layer : Error while creating customer : " + ex.getMessage());
-            throw new Exception(""+ex);
+        catch(Exception ex) {
+            LOG.error("Repository Layer : Error while creating customer : " + ex.getMessage());
+            throw new CustomerException("Repository Layer : Error while creating customer : " + ex.getMessage());
         }
-        return true;
     }
 
-    public boolean updateCustomer(long customerId, Customer customer)  throws Exception{
+    public void updateCustomer(long customerId, Customer customer)  throws CustomerException{
         try {
             LOG.info("Repository Layer : Processing create customer");
             Query query = new Query();
@@ -41,9 +41,8 @@ public class CustomerDaoRepositoryImpl implements CustomerDaoRepository {
             Customer customerRepo = mongoOperations.findAndReplace(query, customer);
         }
          catch(Exception ex) {
-            LOG.error("Repository Layer : Error while creating customer : " + ex.getMessage());
-            throw new Exception(""+ex);
+            LOG.error("Repository Layer : Error while updating customer : " + ex.getMessage());
+            throw new CustomerException("Repository Layer : Error while updating customer : " + ex.getMessage());
         }
-        return true;
     }
 }

@@ -1,7 +1,9 @@
 package com.retail.loyalty.service;
 
+import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.repository.CustomerDaoRepository;
+import com.retail.loyalty.response.CustomerResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,30 +17,29 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerDaoRepository customerDaoRepository;
 
-    public boolean createCustomer(Customer customer) throws Exception{
+    public CustomerResponse createCustomer(Customer customer) throws CustomerException {
         try {
             LOG.info("Service Layer : Processing create customer");
             customerDaoRepository.createCustomer(customer);
         }
         catch(Exception ex) {
             LOG.error("Service Layer : Error while creating customer : " + ex.getMessage());
-            throw new Exception(""+ex);
+            throw new CustomerException("Service Layer : Error while creating customer : " + ex.getMessage());
         }
-        return true;
+        return
+          new CustomerResponse(){{setStatus("success");setMessage("customer created successfully");}};
     }
 
-    public boolean updateCustomer(long customerId, Customer customer) throws Exception{
+    public CustomerResponse updateCustomer(long customerId, Customer customer) throws CustomerException{
         try {
             LOG.info("Service Layer : Processing update customer");
             customerDaoRepository.updateCustomer(customerId, customer);
         }
-        catch(Exception ex) {
+        catch(CustomerException ex) {
             LOG.error("Service Layer : Error while updating customer : " + ex.getMessage());
-            throw new Exception(""+ex);
+            throw new CustomerException("Service Layer : Error while updating customer : " + ex.getMessage());
         }
-        return true;
-
+        return
+                new CustomerResponse(){{setStatus("success");setMessage("customer updated successfully");}};
     }
-
-
 }

@@ -1,6 +1,7 @@
 package com.retail.loyalty.repository;
 
 import com.mongodb.client.model.Updates;
+import com.retail.loyalty.exception.CustomerContactException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerContactDetails;
 import com.retail.loyalty.service.CustomerServiceImpl;
@@ -24,7 +25,7 @@ public class CustomerContactDaoRepositoryImpl implements CustomerContactDaoRepos
     @Autowired
     MongoOperations mongoOperations;
 
-    public boolean addCustomerContact(long customerId, CustomerContactDetails customerContactDetails) throws Exception{
+    public void addCustomerContact(long customerId, CustomerContactDetails customerContactDetails) throws CustomerContactException {
         try {
             LOG.info("Repo Layer : Processing create customer");
             Query query = new Query();
@@ -38,12 +39,11 @@ public class CustomerContactDaoRepositoryImpl implements CustomerContactDaoRepos
         }
         catch(Exception ex) {
             LOG.error("Repo Layer : Error while creating customer : " + ex.getMessage());
-            throw new Exception(""+ex);
+            throw new CustomerContactException("Repo Layer : Error while creating customer :"+ex);
         }
-        return true;
     }
 
-    public boolean updateCustomerContact(long customerId, CustomerContactDetails customerContactDetails) throws Exception{
+    public void updateCustomerContact(long customerId, CustomerContactDetails customerContactDetails) throws CustomerContactException{
         try {
             LOG.info("Repo Layer : Processing create customer");
             Query query = new Query();
@@ -57,8 +57,7 @@ public class CustomerContactDaoRepositoryImpl implements CustomerContactDaoRepos
         }
         catch(Exception ex) {
             LOG.error("Repo Layer : Error while creating customer : " + ex.getMessage());
-            throw new Exception(""+ex);
+            throw new CustomerContactException("Repo Layer : Error while creating customer :"+ex);
         }
-        return true;
     }
 }

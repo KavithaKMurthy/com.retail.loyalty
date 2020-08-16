@@ -122,3 +122,557 @@
 2020-08-16 00:10:17,000 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
 2020-08-16 00:10:17,017 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
 2020-08-16 00:10:17,111 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 17.273 seconds (JVM running for 19.022)
+2020-08-16 23:02:47,445 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 2536 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:02:47,468 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:02:47,748 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:02:47,749 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:02:52,325 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:02:52,493 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 157ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:02:53,076 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@60553d3c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:02:53,088 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:02:54,617 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:02:54,638 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:02:54,640 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:02:54,640 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:02:55,106 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:02:55,106 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7355 ms
+2020-08-16 23:02:55,660 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtRequestFilter': Unsatisfied dependency expressed through field 'jwtUserDetailsService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.retail.loyalty.security.JwtUserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-08-16 23:02:55,724 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-16 23:02:55,744 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-08-16 23:02:55,777 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-16 23:02:56,292 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtUserDetailsService in com.retail.loyalty.security.filter.JwtRequestFilter required a bean of type 'com.retail.loyalty.security.JwtUserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.retail.loyalty.security.JwtUserDetailsService' in your configuration.
+
+2020-08-16 23:06:45,449 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 18320 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:06:45,458 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:06:45,581 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:06:45,582 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:06:48,154 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:06:48,298 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 134ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:06:48,810 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@638cae8b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:06:48,826 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:06:50,071 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:06:50,089 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:06:50,091 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:06:50,091 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:06:50,411 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:06:50,411 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4829 ms
+2020-08-16 23:06:51,366 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:06:51,539 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f396eb3ee9da94d4ab0e168', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:247}] to localhost:27017
+2020-08-16 23:06:51,549 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f396eb3ee9da94d4ab0e168', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6412900}
+2020-08-16 23:06:51,905 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:06:52,403 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationController': Unsatisfied dependency expressed through field 'authenticationManager'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'jwtAuthenticationEntryPoint'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.retail.loyalty.security.JwtAuthenticationEntryPoint' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-08-16 23:06:52,413 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-08-16 23:06:52,446 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-16 23:06:52,951 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtAuthenticationEntryPoint in com.retail.loyalty.security.WebSecurityConfig required a bean of type 'com.retail.loyalty.security.JwtAuthenticationEntryPoint' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.retail.loyalty.security.JwtAuthenticationEntryPoint' in your configuration.
+
+2020-08-16 23:07:26,490 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 15020 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:07:26,497 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:07:26,610 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:07:26,611 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:07:29,008 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:07:29,152 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 136ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:07:29,601 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f187160' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:07:29,609 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:07:30,833 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:07:30,854 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:07:30,856 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:07:30,857 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:07:31,146 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:07:31,147 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4536 ms
+2020-08-16 23:07:31,968 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:07:32,080 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f396edb79da60134ad60abe', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:248}] to localhost:27017
+2020-08-16 23:07:32,087 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f396edb79da60134ad60abe', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4370500}
+2020-08-16 23:07:32,367 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:07:33,842 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:07:34,077 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:07:34,454 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6541a785, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e9c9171, org.springframework.security.web.header.HeaderWriterFilter@3006a58b, org.springframework.security.web.authentication.logout.LogoutFilter@71cd6f72, com.retail.loyalty.security.filter.JwtRequestFilter@74e3fd3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@214520ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62d8313a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@487bd587, org.springframework.security.web.session.SessionManagementFilter@add0cb2, org.springframework.security.web.access.ExceptionTranslationFilter@628e1f2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@448b21a5]
+2020-08-16 23:07:34,695 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:07:35,072 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:07:35,114 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:07:35,115 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:07:35,173 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:07:35,247 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:07:35,467 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:07:35,474 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:07:35,478 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:07:35,521 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 10.1 seconds (JVM running for 11.579)
+2020-08-16 23:08:58,227 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:08:58,228 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:08:58,249 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 21 ms
+2020-08-16 23:08:58,293 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:09:16,173 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:09:20,992 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:09:21,256 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:09:30,611 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-5] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xa8n0xd50}0xb7pp0x82N0x8a0xe80x89a0x090xf80x1fC0xd6wJ{0xc00x960x820xc50xc20xb60x9e*=0xa1]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:418)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:260)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-16 23:09:30,611 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-6] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03Mu0xbe@0xc10xf7V0x800xd9{J0xd7-x0xe50xf20xe1?0xf60xb10xd80x0a0x150xddf0x030x1e0xed0xde0x110x89a]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:418)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:260)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-08-16 23:11:24,434 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:11:34,241 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:11:37,841 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:13:16,102 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:13:53,741 INFO com.retail.loyalty.service.CustomerServiceImpl [http-nio-8080-exec-7] Service Layer : Processing create customer
+2020-08-16 23:13:53,750 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [http-nio-8080-exec-7] Repo Layer : Processing create customer
+2020-08-16 23:13:53,894 INFO com.mongodb.diagnostics.logging.SLF4JLogger [http-nio-8080-exec-7] Opened connection [connectionId{localValue:2, serverValue:249}] to localhost:27017
+2020-08-16 23:14:32,144 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:17:30,647 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 13552 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:17:30,655 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:17:30,782 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:17:30,783 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:17:33,981 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:17:34,138 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 135ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:17:35,097 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7bc4abee' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:17:35,105 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:17:36,298 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:17:36,323 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:17:36,324 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:17:36,324 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:17:36,604 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:17:36,605 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 5822 ms
+2020-08-16 23:17:37,449 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:17:37,562 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3971397d0ca16a78c99307', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:255}] to localhost:27017
+2020-08-16 23:17:37,571 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3971397d0ca16a78c99307', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6117000}
+2020-08-16 23:17:37,847 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:17:39,114 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:17:39,554 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:17:40,075 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Ant [pattern='/swagger-ui.html'], []
+2020-08-16 23:17:40,239 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ebe5298, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a18576e, org.springframework.security.web.header.HeaderWriterFilter@518d93b1, org.springframework.security.web.authentication.logout.LogoutFilter@58b2b33d, com.retail.loyalty.security.filter.JwtRequestFilter@43ef5fbc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25ee5f87, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43077c0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e62d611, org.springframework.security.web.session.SessionManagementFilter@7e06d163, org.springframework.security.web.access.ExceptionTranslationFilter@7771e0ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b6eaed0]
+2020-08-16 23:17:40,920 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:17:41,376 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:17:41,425 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:17:41,428 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:17:41,492 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:17:41,567 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:17:41,955 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:17:41,961 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:17:41,966 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:17:42,042 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 12.566 seconds (JVM running for 13.725)
+2020-08-16 23:17:46,164 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:17:46,165 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:17:46,177 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 11 ms
+2020-08-16 23:17:46,206 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,321 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,321 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,321 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,321 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,321 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,492 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,505 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,526 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:17:46,543 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,278 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,305 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,311 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,311 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,309 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,315 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,338 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,352 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,364 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:17:51,377 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,057 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,082 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,084 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,085 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,086 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,105 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,120 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,131 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,144 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:17:55,155 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:18:40,547 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 25012 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:18:40,556 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:18:40,744 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:18:40,745 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:18:44,458 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:18:44,707 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 235ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:19:09,738 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 28040 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:19:09,754 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:19:09,902 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:19:09,903 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:19:14,140 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:19:14,427 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 269ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:19:15,445 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5da87fbf' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:19:15,459 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:19:18,199 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:19:18,233 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:19:18,235 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:19:18,236 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:19:18,605 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:19:18,606 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 8702 ms
+2020-08-16 23:19:20,910 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:19:21,150 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3971a010496b41e6abf798', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:256}] to localhost:27017
+2020-08-16 23:19:21,165 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3971a010496b41e6abf798', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10324900}
+2020-08-16 23:19:21,608 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:19:23,324 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:19:23,544 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:19:24,089 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/**', OPTIONS], []
+2020-08-16 23:19:24,091 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-ui.html/**'], []
+2020-08-16 23:19:24,092 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/configuration/**'], []
+2020-08-16 23:19:24,092 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-resources/**'], []
+2020-08-16 23:19:24,093 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/v2/api-docs'], []
+2020-08-16 23:19:24,093 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/webjars/**'], []
+2020-08-16 23:19:24,193 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@222af06e, org.springframework.security.web.context.SecurityContextPersistenceFilter@420533ae, org.springframework.security.web.header.HeaderWriterFilter@56eea1b1, org.springframework.security.web.authentication.logout.LogoutFilter@38d88608, com.retail.loyalty.security.filter.JwtRequestFilter@63eb78db, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@227ff93d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19e841c5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a648c24, org.springframework.security.web.session.SessionManagementFilter@48d895cb, org.springframework.security.web.access.ExceptionTranslationFilter@3f89a9e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60244700]
+2020-08-16 23:19:24,365 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:19:24,844 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:19:24,904 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:19:24,907 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:19:24,976 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:19:25,086 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:19:25,449 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:19:25,456 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:19:25,469 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:19:25,546 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 17.326 seconds (JVM running for 18.823)
+2020-08-16 23:19:48,760 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:19:48,761 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:19:48,779 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 17 ms
+2020-08-16 23:19:48,856 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,038 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,039 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,053 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,058 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,067 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,632 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,644 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,809 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,844 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:19:49,940 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:19:50,095 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:19:50,701 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:19:50,705 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:30:49,093 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:38:04,055 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 27712 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:38:04,063 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:38:04,234 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:38:04,236 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:38:07,193 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:38:07,392 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 186ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:38:08,415 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@46dc8fc5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:38:08,430 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:38:11,099 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:38:11,135 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:38:11,137 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:38:11,138 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:38:11,705 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:38:11,707 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7465 ms
+2020-08-16 23:38:13,352 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:38:13,557 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f39760dbdc7015802efcd21', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:257}] to localhost:27017
+2020-08-16 23:38:13,568 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f39760dbdc7015802efcd21', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6889300}
+2020-08-16 23:38:13,848 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:38:15,529 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:38:16,056 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:38:16,644 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/**', OPTIONS], []
+2020-08-16 23:38:16,645 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-ui.html/**'], []
+2020-08-16 23:38:16,646 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/configuration/**'], []
+2020-08-16 23:38:16,646 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-resources/**'], []
+2020-08-16 23:38:16,647 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/v2/api-docs'], []
+2020-08-16 23:38:16,647 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/webjars/**'], []
+2020-08-16 23:38:16,736 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@907291f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d7a2ad1, org.springframework.security.web.header.HeaderWriterFilter@57397b29, org.springframework.security.web.authentication.logout.LogoutFilter@1709f93a, com.retail.loyalty.security.filter.JwtRequestFilter@68502e53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e580ebd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51fbd1cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@e17c833, org.springframework.security.web.session.SessionManagementFilter@1e977f9e, org.springframework.security.web.access.ExceptionTranslationFilter@66af1778, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d760fe7]
+2020-08-16 23:38:16,879 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:38:17,232 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:38:17,283 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:38:17,286 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:38:17,404 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:38:17,626 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:38:17,948 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:38:17,954 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:38:17,959 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:38:18,019 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 15.557 seconds (JVM running for 17.178)
+2020-08-16 23:38:28,248 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:38:28,249 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:38:28,272 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 21 ms
+2020-08-16 23:38:28,358 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:38:28,489 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:38:28,501 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:38:28,505 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:38:28,515 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:38:28,517 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,170 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,330 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,369 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,456 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,495 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,977 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:38:29,986 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:38:31,933 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:38:51,487 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:38:53,289 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:39:48,736 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:40:04,397 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:40:31,361 INFO com.retail.loyalty.service.CustomerServiceImpl [http-nio-8080-exec-5] Service Layer : Processing create customer
+2020-08-16 23:40:31,374 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [http-nio-8080-exec-5] Repo Layer : Processing create customer
+2020-08-16 23:40:31,579 INFO com.mongodb.diagnostics.logging.SLF4JLogger [http-nio-8080-exec-5] Opened connection [connectionId{localValue:2, serverValue:258}] to localhost:27017
+2020-08-16 23:40:53,087 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:42:37,942 INFO com.retail.loyalty.service.CustomerServiceImpl [http-nio-8080-exec-7] Service Layer : Processing create customer
+2020-08-16 23:42:37,945 INFO com.retail.loyalty.repository.CustomerDaoRepositoryImpl [http-nio-8080-exec-7] Repo Layer : Processing create customer
+2020-08-16 23:42:49,777 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:45:41,103 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 5868 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:45:41,111 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:45:41,252 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:45:41,253 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:45:44,375 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:45:44,512 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 128ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:45:45,001 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3e2b40f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:45:45,015 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:45:47,528 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:45:47,559 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:45:47,560 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:45:47,561 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:45:47,904 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:45:47,905 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 6651 ms
+2020-08-16 23:45:48,897 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:45:49,032 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3977d43899d0149d2a8d6d', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:259}] to localhost:27017
+2020-08-16 23:45:49,043 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3977d43899d0149d2a8d6d', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6178000}
+2020-08-16 23:45:49,351 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:45:50,931 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:45:51,207 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:45:51,761 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/**', OPTIONS], []
+2020-08-16 23:45:51,762 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-ui.html/**'], []
+2020-08-16 23:45:51,763 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/configuration/**'], []
+2020-08-16 23:45:51,763 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-resources/**'], []
+2020-08-16 23:45:51,764 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/v2/api-docs'], []
+2020-08-16 23:45:51,764 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/webjars/**'], []
+2020-08-16 23:45:51,860 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e169e7a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a7934d2, org.springframework.security.web.header.HeaderWriterFilter@663106f9, org.springframework.security.web.authentication.logout.LogoutFilter@a3b2b94, com.retail.loyalty.security.filter.JwtRequestFilter@7d3804ca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77133803, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f1ce4e8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@587b852f, org.springframework.security.web.session.SessionManagementFilter@2971806a, org.springframework.security.web.access.ExceptionTranslationFilter@e88212f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22cc8c2b]
+2020-08-16 23:45:52,065 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:45:52,435 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:45:52,492 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:45:52,493 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:45:52,556 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:45:52,645 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:45:52,959 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:45:52,967 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:45:52,976 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:45:53,046 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 13.621 seconds (JVM running for 15.4)
+2020-08-16 23:46:12,477 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:46:12,478 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:46:12,498 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 18 ms
+2020-08-16 23:46:12,562 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,729 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,731 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,739 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,743 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,746 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,745 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,879 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,879 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,909 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,912 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:46:12,914 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:46:13,743 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:46:14,062 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:46:14,109 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:46:14,220 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:46:14,274 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:46:14,786 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:46:14,789 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:48:00,926 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 30016 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:48:00,935 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:48:01,088 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:48:01,088 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:48:04,466 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:48:04,638 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 159ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:48:05,228 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@73058789' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:48:05,240 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:48:07,488 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:48:07,529 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:48:07,533 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:48:07,534 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:48:08,117 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:48:08,118 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7029 ms
+2020-08-16 23:48:10,665 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:48:11,297 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f397862498d645f33705f07', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:260}] to localhost:27017
+2020-08-16 23:48:11,375 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f397862498d645f33705f07', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10507100}
+2020-08-16 23:48:11,804 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:48:13,742 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:48:14,408 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:48:15,310 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/**', OPTIONS], []
+2020-08-16 23:48:15,311 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-ui.html/**'], []
+2020-08-16 23:48:15,312 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/configuration/**'], []
+2020-08-16 23:48:15,313 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-resources/**'], []
+2020-08-16 23:48:15,314 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/v2/api-docs'], []
+2020-08-16 23:48:15,314 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/webjars/**'], []
+2020-08-16 23:48:15,383 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7613af92, org.springframework.security.web.context.SecurityContextPersistenceFilter@77545b4, org.springframework.security.web.header.HeaderWriterFilter@448d089b, org.springframework.security.web.authentication.logout.LogoutFilter@7a794f59, com.retail.loyalty.security.filter.JwtRequestFilter@332d3c5d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53a0205f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d3f29f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cfe1d66, org.springframework.security.web.session.SessionManagementFilter@42ce98e4, org.springframework.security.web.access.ExceptionTranslationFilter@5cc1c27b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74ad8ef]
+2020-08-16 23:48:15,512 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:48:15,873 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:48:15,927 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:48:15,934 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:48:16,039 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:48:16,222 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:48:16,567 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:48:16,573 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:48:16,578 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:48:16,596 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_4
+2020-08-16 23:48:16,660 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 17.157 seconds (JVM running for 18.622)
+2020-08-16 23:48:47,055 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 29300 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:48:47,063 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:48:47,200 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:48:47,203 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:48:50,731 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:48:50,912 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 168ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:48:51,567 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@36217233' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:48:51,587 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:48:53,351 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:48:53,382 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:48:53,386 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:48:53,387 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:48:54,257 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:48:54,259 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 7055 ms
+2020-08-16 23:48:57,041 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:48:57,351 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f397891c87f13457bdaee13', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:261}] to localhost:27017
+2020-08-16 23:48:57,369 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f397891c87f13457bdaee13', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=9527200}
+2020-08-16 23:48:57,781 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:48:59,743 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:49:00,052 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:49:00,645 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/**', OPTIONS], []
+2020-08-16 23:49:00,646 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-ui.html/**'], []
+2020-08-16 23:49:00,647 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/configuration/**'], []
+2020-08-16 23:49:00,647 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-resources/**'], []
+2020-08-16 23:49:00,648 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/v2/api-docs'], []
+2020-08-16 23:49:00,649 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/webjars/**'], []
+2020-08-16 23:49:00,731 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43994d23, org.springframework.security.web.context.SecurityContextPersistenceFilter@56b054e9, org.springframework.security.web.header.HeaderWriterFilter@52bc8212, org.springframework.security.web.authentication.logout.LogoutFilter@25f1d9d3, com.retail.loyalty.security.filter.JwtRequestFilter@74e3fd3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26cd7def, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ffbd8c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54b7c4f2, org.springframework.security.web.session.SessionManagementFilter@4a8e491e, org.springframework.security.web.access.ExceptionTranslationFilter@653d7c51, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c68f239]
+2020-08-16 23:49:00,881 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:49:01,332 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:49:01,386 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:49:01,388 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:49:01,477 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:49:01,627 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:49:02,040 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:49:02,048 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:49:02,060 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:49:02,163 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 16.406 seconds (JVM running for 17.716)
+2020-08-16 23:49:06,361 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:49:06,362 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:49:06,385 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 22 ms
+2020-08-16 23:49:06,482 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:49:06,651 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:49:06,663 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:49:06,685 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:49:06,666 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:49:06,668 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:49:07,345 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:49:07,492 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:49:07,514 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:49:07,593 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:49:07,637 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:49:08,120 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:49:08,125 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:49:09,757 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:49:12,745 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:49:29,176 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:50:15,435 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SpringBootMainApplication on INM20228 with PID 8060 (C:\Projects\MyProjects\Mongo\target\classes started by ks5 in C:\Projects\MyProjects\Mongo)
+2020-08-16 23:50:15,446 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-16 23:50:15,586 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-16 23:50:15,587 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-16 23:50:19,012 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2020-08-16 23:50:19,296 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 264ms. Found 1 MongoDB repository interfaces.
+2020-08-16 23:50:20,357 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@48fca6b6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:50:20,369 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-16 23:50:22,157 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-16 23:50:22,176 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:50:22,177 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-16 23:50:22,178 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 23:50:22,518 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-16 23:50:22,520 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 6932 ms
+2020-08-16 23:50:23,490 INFO com.mongodb.diagnostics.logging.SLF4JLogger [restartedMain] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2020-08-16 23:50:23,636 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3978e771e2751ae97d4953', description='null'}-localhost:27017] Opened connection [connectionId{localValue:1, serverValue:262}] to localhost:27017
+2020-08-16 23:50:23,650 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='5f3978e771e2751ae97d4953', description='null'}-localhost:27017] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=9459900}
+2020-08-16 23:50:23,968 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-16 23:50:25,410 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2020-08-16 23:50:25,640 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-16 23:50:26,146 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/**', OPTIONS], []
+2020-08-16 23:50:26,146 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-ui.html/**'], []
+2020-08-16 23:50:26,147 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/configuration/**'], []
+2020-08-16 23:50:26,147 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/swagger-resources/**'], []
+2020-08-16 23:50:26,148 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/v2/api-docs'], []
+2020-08-16 23:50:26,148 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: Mvc [pattern='/webjars/**'], []
+2020-08-16 23:50:26,221 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9f528c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@e88212f, org.springframework.security.web.header.HeaderWriterFilter@76afa7d8, org.springframework.security.web.authentication.logout.LogoutFilter@18a085e1, com.retail.loyalty.security.filter.JwtRequestFilter@66544e46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@663106f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55e5a418, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e57e003, org.springframework.security.web.session.SessionManagementFilter@18caf578, org.springframework.security.web.access.ExceptionTranslationFilter@4a29bb7f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f769092]
+2020-08-16 23:50:26,344 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 23:50:26,686 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-16 23:50:26,728 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-16 23:50:26,729 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-16 23:50:26,787 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-16 23:50:26,868 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-16 23:50:27,138 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_1
+2020-08-16 23:50:27,145 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_2
+2020-08-16 23:50:27,150 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [restartedMain] Generating unique operation named: Add Customer_3
+2020-08-16 23:50:27,217 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SpringBootMainApplication in 13.434 seconds (JVM running for 15.335)
+2020-08-16 23:50:32,807 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 23:50:32,808 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-16 23:50:32,818 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 9 ms
+2020-08-16 23:50:32,863 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:50:32,962 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:50:32,965 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:50:32,967 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:50:32,971 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:50:32,985 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,068 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,197 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,204 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-10] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,215 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,216 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-1] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,216 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-9] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,641 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-3] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,793 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-2] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,837 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-5] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,936 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-7] JWT Token does not begin with Bearer String
+2020-08-16 23:50:33,984 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-4] JWT Token does not begin with Bearer String
+2020-08-16 23:50:34,816 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-6] JWT Token does not begin with Bearer String
+2020-08-16 23:50:34,814 WARN com.retail.loyalty.security.filter.JwtRequestFilter [http-nio-8080-exec-8] JWT Token does not begin with Bearer String

@@ -5,6 +5,7 @@ import com.retail.loyalty.security.JwtTokenUtil;
 import com.retail.loyalty.security.JwtUserDetailsService;
 import com.retail.loyalty.security.request.JwtRequest;
 import com.retail.loyalty.security.response.JwtResponse;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+@Api(value = "", hidden = true , tags = { "Authentication" })
 @RestController
 @CrossOrigin
 public class JwtAuthenticationController {
@@ -28,7 +30,7 @@ public class JwtAuthenticationController {
     private JwtUserDetailsService userDetailsService;
 
 
-    @ApiOperation(nickname = "Authenticate",value="Get Authorization Token", notes="JWTController",tags={"Authentication"})
+    @ApiOperation(nickname = "Authenticate",value="Get Authorization Token", notes="Authentication",tags={"Authentication"})
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());

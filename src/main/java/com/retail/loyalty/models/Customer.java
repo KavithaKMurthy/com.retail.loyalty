@@ -1,22 +1,34 @@
 package com.retail.loyalty.models;
 
 import com.retail.loyalty.enums.Gender;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import springfox.documentation.annotations.ApiIgnore;
+
+import java.io.Serializable;
 import java.util.Date;
 
 @Document(collection = "customer")
-public class Customer {
+public class Customer{
 
+    @ApiModelProperty(hidden=true)
     @Id
     private long customerId;
+    @ApiModelProperty(hidden=true)
     private String firstName;
+    @ApiModelProperty(hidden=true)
     private String lastName;
+    @ApiModelProperty(hidden=true)
     private int age;
+    @ApiModelProperty(hidden=true)
     private Date dateOfBirth;
+    @ApiModelProperty(hidden=true)
     private Gender gender;
+    @ApiModelProperty(hidden=true)
     private CustomerAddress customerAddress;
-
+    @ApiModelProperty(hidden=true)
     public CustomerContactDetails getCustomerContactDetails() {
         return customerContactDetails;
     }

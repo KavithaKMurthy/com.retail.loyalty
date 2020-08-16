@@ -1,9 +1,13 @@
 package com.retail.loyalty.models;
 
-public class CustomerAddress {
+import io.swagger.annotations.ApiModelProperty;
 
+public class CustomerAddress {
+    @ApiModelProperty(hidden=true)
    private String addressLine1;
+    @ApiModelProperty(hidden=true)
     private String addressLine2;
+    @ApiModelProperty(hidden=true)
     private String addressLine3;
 
     public String getAddressLine1() {
@@ -54,7 +58,10 @@ public class CustomerAddress {
         this.postalCode = postalCode;
     }
 
+    @ApiModelProperty(hidden=true)
     private String state;
+    @ApiModelProperty(hidden=true)
     private String country;
+    @ApiModelProperty(hidden=true)
     private String postalCode;
 }

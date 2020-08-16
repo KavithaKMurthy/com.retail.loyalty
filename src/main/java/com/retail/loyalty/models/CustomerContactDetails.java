@@ -1,7 +1,11 @@
 package com.retail.loyalty.models;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class CustomerContactDetails {
+    @ApiModelProperty(hidden=true)
     private String mobilePhoneNumber;
+    @ApiModelProperty(hidden=true)
     private String dayTimePhoneNumber;
 
     public String getMobilePhoneNumber() {
@@ -28,6 +32,7 @@ public class CustomerContactDetails {
         this.eveningPhoneNumber = eveningPhoneNumber;
     }
 
+    @ApiModelProperty(hidden=true)
     private String eveningPhoneNumber;
 
 }

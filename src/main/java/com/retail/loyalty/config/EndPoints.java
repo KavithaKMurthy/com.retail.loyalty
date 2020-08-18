@@ -6,4 +6,5 @@ public interface  EndPoints {
     public static final String updateCustomer=baseUrl +"/customer/{customerId}";
     public static final String updateCustomerAddress=baseUrl + "/customer/address/{customerId}";
     public static final String updateCustomerContact=baseUrl + "/customer/contact/{customerId}";
+    public static final String jwtAuthenticateUrl = "/authenticate";
 }

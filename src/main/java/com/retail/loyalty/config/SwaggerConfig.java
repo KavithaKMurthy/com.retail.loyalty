@@ -33,8 +33,8 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo())
-                .securitySchemes(Arrays.asList(apiKey())).protocols(Collections.singleton("HTTP"))
-                .ignoredParameterTypes(Customer.class, CustomerAddress.class, CustomerContactDetails.class, CustomerClubcard.class, JwtRequest.class);
+                .securitySchemes(Arrays.asList(apiKey())).protocols(Collections.singleton("HTTP"));
+                //.ignoredParameterTypes(Customer.class, CustomerAddress.class, CustomerContactDetails.class, CustomerClubcard.class, JwtRequest.class);
     }
 
     private ApiInfo apiInfo() {

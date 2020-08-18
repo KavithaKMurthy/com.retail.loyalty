@@ -1,6 +1,7 @@
 package com.retail.loyalty.controller;
 
 
+import com.retail.loyalty.config.EndPoints;
 import com.retail.loyalty.security.JwtTokenUtil;
 import com.retail.loyalty.security.JwtUserDetailsService;
 import com.retail.loyalty.security.request.JwtRequest;
@@ -26,6 +27,7 @@ public class JwtAuthenticationController {
     private AuthenticationManager authenticationManager;
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+
     @Autowired
     private JwtUserDetailsService userDetailsService;
 
@@ -39,6 +41,7 @@ public class JwtAuthenticationController {
         final String token = jwtTokenUtil.generateToken(userDetails);
         return ResponseEntity.ok(new JwtResponse(token));
     }
+
     private void authenticate(String username, String password) throws Exception {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));

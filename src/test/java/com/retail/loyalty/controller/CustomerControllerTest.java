@@ -3,6 +3,7 @@ package com.retail.loyalty.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.retail.loyalty.config.EndPoints;
 import com.retail.loyalty.enums.Gender;
+import com.retail.loyalty.exception.CustomerAddressException;
 import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
@@ -17,6 +18,7 @@ import com.retail.loyalty.security.request.JwtRequest;
 import com.retail.loyalty.service.CustomerAddressService;
 import com.retail.loyalty.service.CustomerContactService;
 import com.retail.loyalty.service.CustomerService;
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,6 +32,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -39,6 +43,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.Base64Utils;
 import org.springframework.util.LinkedMultiValueMap;
@@ -49,6 +54,8 @@ import sun.text.resources.iw.FormatData_iw_IL;
 import javax.servlet.FilterChain;
 import java.util.Collection;
 import java.util.Date;
+
+import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
@@ -175,12 +182,35 @@ public class CustomerControllerTest {
 
     @Test
     public void updateCustomerContactDetailsTest() throws Exception{
+        String accessToken = obtainAccessToken(userDetails);
         when(customerContactService.addCustomerContact(customerId,customerContactDetails)).thenReturn(new CustomerResponse());
-
         this.mockMvc.perform(put("/" + EndPoints.updateCustomerContact,customerId)
                 .contentType("application/json")
+                .header("Authorization", "Bearer " + accessToken)
                 .content(objectMapper.writeValueAsString(customerContactDetails)))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void updateCustomerContactDetailsTesForBadCrdentials() throws Exception{
+        userDetails.setUsername("test");
+        when(authenticationManager.authenticate(Mockito.any())).thenThrow(new BadCredentialsException("Bad Credentials"));
+        this.mockMvc.perform(post("/authenticate")
+                .contentType("application/json")
+                .content(objectMapper.writeValueAsString(userDetails)))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(jsonPath("$.message", is("INVALID_CREDENTIALS")));
+    }
+
+    @Test
+    public void updateCustomerContactDetailsTesForDisabledUser() throws Exception{
+        userDetails.setUsername("test");
+        when(authenticationManager.authenticate(Mockito.any())).thenThrow(new DisabledException("USER_DISABLED"));
+        this.mockMvc.perform(post("/authenticate")
+                .contentType("application/json")
+                .content(objectMapper.writeValueAsString(userDetails)))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(jsonPath("$.message", is("USER_DISABLED")));
     }
 
     private String obtainAccessToken(JwtRequest userDetails) throws Exception {

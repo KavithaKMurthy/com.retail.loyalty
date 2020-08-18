@@ -1,14 +1,12 @@
 package com.retail.loyalty.controller;
 
 
-import com.retail.loyalty.config.EndPoints;
 import com.retail.loyalty.security.JwtTokenUtil;
 import com.retail.loyalty.security.JwtUserDetailsService;
 import com.retail.loyalty.security.request.JwtRequest;
 import com.retail.loyalty.security.response.JwtResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

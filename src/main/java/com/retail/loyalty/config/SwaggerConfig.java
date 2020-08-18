@@ -1,11 +1,5 @@
 package com.retail.loyalty.config;
 
-import com.google.common.base.Predicates;
-import com.retail.loyalty.models.Customer;
-import com.retail.loyalty.models.CustomerAddress;
-import com.retail.loyalty.models.CustomerClubcard;
-import com.retail.loyalty.models.CustomerContactDetails;
-import com.retail.loyalty.security.request.JwtRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;

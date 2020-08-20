@@ -4,6 +4,7 @@ import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.repository.CustomerDaoRepository;
 import com.retail.loyalty.response.CustomerResponse;
+import com.retail.loyalty.util.MongoSequenceGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,13 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerDaoRepository customerDaoRepository;
 
+    @Autowired
+    private MongoSequenceGenerator mongoSequenceGenerator;
+
     public CustomerResponse createCustomer(Customer customer) throws CustomerException {
         try {
             LOG.info("Service Layer : Processing create customer");
+            customer.setCustomerId(mongoSequenceGenerator.generateSequence(Customer.SEQUENCE_NAME));
             customerDaoRepository.createCustomer(customer);
         }
         catch(Exception ex) {

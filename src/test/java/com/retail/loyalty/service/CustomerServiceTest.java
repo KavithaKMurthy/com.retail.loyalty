@@ -60,7 +60,6 @@ public class CustomerServiceTest {
 
         customer = new Customer();
         customer.setAge(30);
-        customer.setCustomerId(123l);
         customer.setDateOfBirth(date);
         customer.setGender(Gender.MALE);
         customer.setFirstName("FirtName");

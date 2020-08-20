@@ -110,7 +110,6 @@ public class CustomerControllerTest {
         customerContactDetails.setEveningPhoneNumber("+918095062670");
 
         customer = new Customer();
-        customer.setCustomerId(1231);
         customer.setFirstName("Test");
         customer.setLastName("Test");
         customer.setAge(33);

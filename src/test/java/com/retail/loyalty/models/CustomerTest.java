@@ -37,7 +37,6 @@ public class CustomerTest {
         customerContactDetails.setEveningPhoneNumber("+918095062670");
 
         customer = new Customer();
-        customer.setCustomerId(1231);
         customer.setFirstName("Test");
         customer.setLastName("Test");
         customer.setAge(33);
@@ -47,7 +46,6 @@ public class CustomerTest {
         customer.setCustomerContactDetails(customerContactDetails);
 
         customerGenderUnknown = new Customer();
-        customerGenderUnknown.setCustomerId(1231);
         customerGenderUnknown.setFirstName("Test");
         customerGenderUnknown.setLastName("Test");
         customerGenderUnknown.setAge(33);
@@ -59,7 +57,6 @@ public class CustomerTest {
     @Test
     public void customerTest()
     {
-        Assert.assertEquals(1231,customer.getCustomerId());
         Assert.assertEquals("Test",customer.getFirstName());
         Assert.assertEquals("Test",customer.getLastName());
         Assert.assertEquals(33,customer.getAge());
@@ -71,7 +68,6 @@ public class CustomerTest {
 
     @Test
     public void customerTestForDefaultGender() {
-        Assert.assertEquals(1231,customerGenderUnknown.getCustomerId());
         Assert.assertEquals("Test",customerGenderUnknown.getFirstName());
         Assert.assertEquals("Test",customerGenderUnknown.getLastName());
         Assert.assertEquals(33,customerGenderUnknown.getAge());

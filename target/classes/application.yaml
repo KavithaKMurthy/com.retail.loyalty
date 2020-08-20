@@ -1,9 +1,7 @@
 spring:
   data:
     mongodb:
-      host: localhost
-      database: loyaltydb
-      port: 27017
+      uri: mongodb://admin:admin@localhost:27017/loyaltydb
 
 management:
   endpoints:

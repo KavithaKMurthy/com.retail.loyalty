@@ -2,15 +2,33 @@ package com.retail.loyalty.models;
 
 import com.retail.loyalty.enums.Gender;
 import io.swagger.annotations.ApiModelProperty;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.annotation.Generated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Transient;
 import java.util.Date;
 
 @Document(collection = "customer")
 public class Customer{
 
+    @Transient
+    public static final String SEQUENCE_NAME = "customers_sequence";
+
+    public long getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(long customerId) {
+        this.customerId = customerId;
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(hidden = true)
     private long customerId;
     private String firstName;
     
@@ -33,14 +51,6 @@ public class Customer{
     }
 
     private CustomerContactDetails customerContactDetails;
-
-    public long getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(long customerId) {
-        this.customerId = customerId;
-    }
 
     public CustomerAddress getCustomerAddress() {
         return customerAddress;

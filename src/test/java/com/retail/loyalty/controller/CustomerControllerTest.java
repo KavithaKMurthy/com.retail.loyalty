@@ -3,8 +3,6 @@ package com.retail.loyalty.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.retail.loyalty.config.EndPoints;
 import com.retail.loyalty.enums.Gender;
-import com.retail.loyalty.exception.CustomerAddressException;
-import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
@@ -18,7 +16,6 @@ import com.retail.loyalty.security.request.JwtRequest;
 import com.retail.loyalty.service.CustomerAddressService;
 import com.retail.loyalty.service.CustomerContactService;
 import com.retail.loyalty.service.CustomerService;
-import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,18 +48,13 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.context.WebApplicationContext;
 import sun.text.resources.iw.FormatData_iw_IL;
 
-import javax.servlet.FilterChain;
-import java.util.Collection;
 import java.util.Date;
 
-import static org.assertj.core.api.Assertions.catchThrowable;
-import static org.hamcrest.Matchers.*;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest({CustomerController.class, JwtAuthenticationController.class, JwtUserDetailsService.class, JwtTokenUtil.class})

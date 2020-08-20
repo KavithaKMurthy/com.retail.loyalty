@@ -1,7 +1,5 @@
 package com.retail.loyalty.response;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class CustomerResponse {
     private String message;
     private String status;

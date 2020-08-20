@@ -3,13 +3,9 @@ package com.retail.loyalty.models;
 import io.swagger.annotations.ApiModelProperty;
 
 public class CustomerClubcard {
-    @ApiModelProperty(hidden=true)
     private long clubcardId;
-    @ApiModelProperty(hidden=true)
     private long primaryClubcardId;
-    @ApiModelProperty(hidden=true)
     private int clubcardType;
-    @ApiModelProperty(hidden=true)
     private int clubcardStatus;
 
     public long getClubcardId() {

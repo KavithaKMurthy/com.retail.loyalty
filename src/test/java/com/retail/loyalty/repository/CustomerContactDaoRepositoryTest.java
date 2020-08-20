@@ -1,12 +1,8 @@
 package com.retail.loyalty.repository;
 
-import com.retail.loyalty.enums.Gender;
 import com.retail.loyalty.exception.CustomerContactException;
-import com.retail.loyalty.models.Customer;
-import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
 import org.assertj.core.api.Assertions;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

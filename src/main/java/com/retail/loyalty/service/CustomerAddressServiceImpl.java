@@ -3,7 +3,6 @@ package com.retail.loyalty.service;
 import com.retail.loyalty.exception.CustomerAddressException;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.repository.CustomerAddressDaoRepository;
-import com.retail.loyalty.repository.CustomerContactDaoRepository;
 import com.retail.loyalty.response.CustomerResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

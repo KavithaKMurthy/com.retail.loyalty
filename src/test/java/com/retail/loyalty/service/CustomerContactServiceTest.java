@@ -1,8 +1,6 @@
 package com.retail.loyalty.service;
 
-import com.retail.loyalty.exception.CustomerAddressException;
 import com.retail.loyalty.exception.CustomerContactException;
-import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.CustomerContactDetails;
 import com.retail.loyalty.repository.CustomerContactDaoRepository;
 import com.retail.loyalty.response.CustomerResponse;
@@ -16,12 +14,10 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import static org.assertj.core.api.Assertions.assertThat;
+
 import static org.assertj.core.api.Assertions.catchThrowable;
-import static org.mockito.ArgumentMatcher.*;
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)

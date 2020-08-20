@@ -1,7 +1,6 @@
 package com.retail.loyalty.models;
 
 
-import com.retail.loyalty.SpringBootMainApplication;
 import com.retail.loyalty.enums.Gender;
 import org.junit.Assert;
 import org.junit.Before;

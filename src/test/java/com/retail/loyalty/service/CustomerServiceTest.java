@@ -1,15 +1,12 @@
 package com.retail.loyalty.service;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.retail.loyalty.enums.Gender;
 import com.retail.loyalty.exception.CustomerException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
-import com.retail.loyalty.repository.CustomerContactDaoRepository;
 import com.retail.loyalty.repository.CustomerDaoRepository;
 import com.retail.loyalty.response.CustomerResponse;
-import com.retail.loyalty.service.CustomerServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,9 +17,12 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import static org.assertj.core.api.Assertions.catchThrowable;
-import static org.mockito.Mockito.*;
+
 import java.util.Date;
+
+import static org.assertj.core.api.Assertions.catchThrowable;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doThrow;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)

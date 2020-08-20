@@ -1,6 +1,5 @@
 package com.retail.loyalty.repository;
 
-import com.mongodb.client.model.Updates;
 import com.retail.loyalty.exception.CustomerContactException;
 import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerContactDetails;
@@ -8,7 +7,6 @@ import com.retail.loyalty.service.CustomerServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.ExecutableUpdateOperation;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;

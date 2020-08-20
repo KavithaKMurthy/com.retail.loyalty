@@ -19,42 +19,30 @@ import com.retail.loyalty.service.CustomerService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.json.JacksonJsonParser;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
-import org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.FilterChainProxy;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.util.Base64Utils;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.context.WebApplicationContext;
-import sun.text.resources.iw.FormatData_iw_IL;
 
 import java.util.Date;
 
 import static org.hamcrest.Matchers.is;
-import static org.mockito.Mockito.*;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest({CustomerController.class, JwtAuthenticationController.class, JwtUserDetailsService.class, JwtTokenUtil.class})
@@ -102,11 +90,10 @@ public class CustomerControllerTest {
     CustomerAddress customerAddress;
     CustomerContactDetails customerContactDetails;
     long customerId;
-    JwtRequest userDetails ;
+    JwtRequest userDetails;
 
     @Before
-    public void setup()
-    {
+    public void setup() {
         customerId = 1231;
 
         customerAddress = new CustomerAddress();
@@ -144,17 +131,6 @@ public class CustomerControllerTest {
         String accessToken = obtainAccessToken(userDetails);
         when(customerService.createCustomer(customer)).thenReturn(new CustomerResponse());
         this.mockMvc.perform(post("/" + EndPoints.addCustomer)
-                    .contentType("application/json")
-                    .header("Authorization", "Bearer " + accessToken)
-                    .content(objectMapper.writeValueAsString(customer)))
-                    .andExpect(status().isOk());
-    }
-
-    @Test
-    public void updateCustomerTest() throws Exception{
-        String accessToken = obtainAccessToken(userDetails);
-        when(customerService.updateCustomer(customerId,customer)).thenReturn(new CustomerResponse());
-        this.mockMvc.perform(put("/" + EndPoints.updateCustomer,customerId)
                 .contentType("application/json")
                 .header("Authorization", "Bearer " + accessToken)
                 .content(objectMapper.writeValueAsString(customer)))
@@ -162,10 +138,21 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void updateCustomerAddressTest() throws Exception{
+    public void updateCustomerTest() throws Exception {
         String accessToken = obtainAccessToken(userDetails);
-        when(customerAddressService.addCustomerAddress(customerId,customerAddress)).thenReturn(new CustomerResponse());
-        this.mockMvc.perform(put("/" + EndPoints.updateCustomerAddress,customerId)
+        when(customerService.updateCustomer(customerId, customer)).thenReturn(new CustomerResponse());
+        this.mockMvc.perform(put("/" + EndPoints.updateCustomer, customerId)
+                .contentType("application/json")
+                .header("Authorization", "Bearer " + accessToken)
+                .content(objectMapper.writeValueAsString(customer)))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void updateCustomerAddressTest() throws Exception {
+        String accessToken = obtainAccessToken(userDetails);
+        when(customerAddressService.addCustomerAddress(customerId, customerAddress)).thenReturn(new CustomerResponse());
+        this.mockMvc.perform(put("/" + EndPoints.updateCustomerAddress, customerId)
                 .contentType("application/json")
                 .header("Authorization", "Bearer " + accessToken)
                 .content(objectMapper.writeValueAsString(customerAddress)))
@@ -173,10 +160,10 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void updateCustomerContactDetailsTest() throws Exception{
+    public void updateCustomerContactDetailsTest() throws Exception {
         String accessToken = obtainAccessToken(userDetails);
-        when(customerContactService.addCustomerContact(customerId,customerContactDetails)).thenReturn(new CustomerResponse());
-        this.mockMvc.perform(put("/" + EndPoints.updateCustomerContact,customerId)
+        when(customerContactService.addCustomerContact(customerId, customerContactDetails)).thenReturn(new CustomerResponse());
+        this.mockMvc.perform(put("/" + EndPoints.updateCustomerContact, customerId)
                 .contentType("application/json")
                 .header("Authorization", "Bearer " + accessToken)
                 .content(objectMapper.writeValueAsString(customerContactDetails)))
@@ -184,7 +171,7 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void updateCustomerContactDetailsTesForBadCrdentials() throws Exception{
+    public void updateCustomerContactDetailsTesForBadCrdentials() throws Exception {
         userDetails.setUsername("test");
         when(authenticationManager.authenticate(Mockito.any())).thenThrow(new BadCredentialsException("Bad Credentials"));
         this.mockMvc.perform(post("/authenticate")
@@ -195,7 +182,7 @@ public class CustomerControllerTest {
     }
 
     @Test
-    public void updateCustomerContactDetailsTesForDisabledUser() throws Exception{
+    public void updateCustomerContactDetailsTesForDisabledUser() throws Exception {
         userDetails.setUsername("test");
         when(authenticationManager.authenticate(Mockito.any())).thenThrow(new DisabledException("USER_DISABLED"));
         this.mockMvc.perform(post("/authenticate")
@@ -207,11 +194,11 @@ public class CustomerControllerTest {
 
     private String obtainAccessToken(JwtRequest userDetails) throws Exception {
         ResultActions result
-              =
+                =
                 this.mockMvc.perform(post("/authenticate")
-                .contentType("application/json")
-                .content(objectMapper.writeValueAsString(userDetails)))
-                .andExpect(status().isOk());
+                        .contentType("application/json")
+                        .content(objectMapper.writeValueAsString(userDetails)))
+                        .andExpect(status().isOk());
 
         String resultString = result.andReturn().getResponse().getContentAsString();
 

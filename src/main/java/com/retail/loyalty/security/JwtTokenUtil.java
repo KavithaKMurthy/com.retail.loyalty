@@ -1,6 +1,5 @@
 package com.retail.loyalty.security;
 
-import com.retail.loyalty.models.Customer;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

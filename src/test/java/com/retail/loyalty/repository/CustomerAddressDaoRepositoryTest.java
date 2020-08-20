@@ -1,12 +1,8 @@
 package com.retail.loyalty.repository;
 
-import com.retail.loyalty.enums.Gender;
 import com.retail.loyalty.exception.CustomerAddressException;
-import com.retail.loyalty.models.Customer;
 import com.retail.loyalty.models.CustomerAddress;
-import com.retail.loyalty.models.CustomerContactDetails;
 import org.assertj.core.api.Assertions;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.Date;
 
 import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.Mockito.when;

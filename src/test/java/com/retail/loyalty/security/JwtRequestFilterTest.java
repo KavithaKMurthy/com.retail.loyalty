@@ -1,24 +1,22 @@
 package com.retail.loyalty.security;
 
-import com.retail.loyalty.exception.CustomerAddressException;
 import com.retail.loyalty.security.filter.JwtRequestFilter;
-import io.jsonwebtoken.*;
-import org.assertj.core.api.Assertions;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Header;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
-import io.jsonwebtoken.ExpiredJwtException;
+
 import javax.servlet.FilterChain;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.Mockito.*;
 
 @RunWith(SpringRunner.class)

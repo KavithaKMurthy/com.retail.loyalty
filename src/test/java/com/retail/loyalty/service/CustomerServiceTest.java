@@ -7,6 +7,7 @@ import com.retail.loyalty.models.CustomerAddress;
 import com.retail.loyalty.models.CustomerContactDetails;
 import com.retail.loyalty.repository.CustomerDaoRepository;
 import com.retail.loyalty.response.CustomerResponse;
+import com.retail.loyalty.util.MongoSequenceGenerator;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Before;
@@ -21,8 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Date;
 
 import static org.assertj.core.api.Assertions.catchThrowable;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.*;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
@@ -39,6 +39,8 @@ public class CustomerServiceTest {
     private CustomerDaoRepository customerDaoRepository;
     @InjectMocks
     private CustomerServiceImpl customerService;
+    @Mock
+    private MongoSequenceGenerator mongoSequenceGenerator;
 
     @Before
     public void setup()
@@ -72,7 +74,8 @@ public class CustomerServiceTest {
     public void addCustomerServiceTest() throws CustomerException {
 
        doNothing().when(customerDaoRepository).createCustomer(Mockito.any());
-         customerResponse =customerService.createCustomer(Mockito.any());
+        when(mongoSequenceGenerator.generateSequence(Mockito.any())).thenReturn(Mockito.anyLong());
+         customerResponse =customerService.createCustomer(customer);
          Assert.assertNotNull(customerResponse);
         Assert.assertEquals("success",customerResponse.getStatus());
         Assert.assertEquals("customer created successfully",customerResponse.getMessage());
@@ -92,6 +95,7 @@ public class CustomerServiceTest {
     public void addCustomerServiceTestWithException() throws CustomerException {
 
         doThrow(new CustomerException("Invalid Customer")).when(customerDaoRepository).createCustomer(Mockito.any());
+        when(mongoSequenceGenerator.generateSequence(Mockito.any())).thenReturn(Mockito.anyLong());
         Throwable thrown = catchThrowable(() ->
                 customerService.createCustomer(customer)
         );
